@@ -1,0 +1,18 @@
+ALGORITHM for_for
+VAR
+  tab1 :ARRAY_OF INTEGER[4];
+  tab2 :=ARRAY_OF INTEGER[5];
+ i,j,sum : INTEGER;
+BEGIN
+  Read(tab1);
+  Read(tab2);
+  sum :=0;
+FOR i FROM 0 TO tab1.length-1 STEP 1  DO
+    FOR j FROM 0 TO tab2.length-1 STEP step  DO
+        IF (tab1[i]=tab2[j]) THEN
+            sum=sum+tab1[i]+tab2[j]
+
+        END_IF
+    END_FOR
+END_FOR
+END
